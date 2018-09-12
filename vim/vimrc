@@ -3,6 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'ambv/black'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'editorconfig/editorconfig-vim'
@@ -82,3 +83,6 @@ let g:syntastic_html_checkers = ['tidy']
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args ='--doctests --ignore=E123,E203,E221,E222,E241,E251,E272'
+augroup black
+    autocmd BufWritePre *.py execute ':Black'
+augroup END
