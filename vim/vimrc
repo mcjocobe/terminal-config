@@ -9,6 +9,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'shime/vim-livedown'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
