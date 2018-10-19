@@ -13,3 +13,5 @@ set incsearch
 set lazyredraw
 set laststatus=2
 set magic
+set mat=2
+set showmatch
