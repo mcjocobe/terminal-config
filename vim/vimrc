@@ -13,6 +13,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
@@ -53,6 +54,7 @@ set wildignore+=*.sqlite3
 set wildmenu
 set wildmode=longest:full
 set wrap
+syntax enable
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 let g:airline_powerline_fonts=1
@@ -64,3 +66,12 @@ let g:jedi#completions_enabled=1
 let g:jedi#popup_on_dot=0
 let g:jedi#show_call_signatures=2
 let g:NERDTreeIgnore=['__pycache__']
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_c_checkers = ['splint', 'clang_check', 'make', 'gcc']
+let g:syntastic_html_checkers = ['tidy']
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args ='--doctests --ignore=E123,E203,E221,E222,E241,E251,E272'
