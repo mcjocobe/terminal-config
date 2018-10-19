@@ -20,4 +20,5 @@ set noerrorbells
 set noswapfile
 set novisualbell
 set nowritebackup
+set number
 set showmatch
