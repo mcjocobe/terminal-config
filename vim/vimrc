@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
@@ -37,7 +38,12 @@ set wildignore+=*/man/*
 set wildignore+=*/share/*
 set wildignore+=*.pyo,*.pyc,*/__pycache__/*
 set wildignore+=*.sqlite3
+set wildmenu
+set wildmode=longest:full
 set wrap
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 let g:ctrlp_follow_symlinks = 1
+let g:jedi#completions_enabled=1
+let g:jedi#popup_on_dot=0
+let g:jedi#show_call_signatures=2
