@@ -11,6 +11,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'shime/vim-livedown'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
@@ -31,9 +33,13 @@ set nowritebackup
 set number
 set ruler
 set showmatch
+set noshowmode
 set smartindent
 set splitbelow
 set splitright
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatusLineFlag()}
+set statusline+=%*
 set ttimeoutlen=50
 set whichwrap+=<,>,h,l
 set wildignore+=*/bin/*
@@ -49,6 +55,10 @@ set wildmode=longest:full
 set wrap
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
+let g:airline_powerline_fonts=1
+let g:airline_theme='base16'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:ctrlp_follow_symlinks = 1
 let g:jedi#completions_enabled=1
 let g:jedi#popup_on_dot=0
