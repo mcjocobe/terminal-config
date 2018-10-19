@@ -16,9 +16,12 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vimwiki/vimwiki'
 Plugin 'wakatime/vim-wakatime'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 filetype plugin indent on
+colorscheme solarized
 set backspace=eol,start,indent
+set background=light
 set encoding=utf8
 set ffs=unix,dos,mac
 set hlsearch
@@ -68,6 +71,8 @@ let g:jedi#completions_enabled=1
 let g:jedi#popup_on_dot=0
 let g:jedi#show_call_signatures=2
 let g:NERDTreeIgnore=['__pycache__']
+let g:solarized_bold=0
+let g:solarized_italic=0
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
