@@ -28,3 +28,4 @@ set splitbelow
 set splitright
 set ttimeoutlen=50
 set whichwrap+=<,>,h,l
+set wrap
