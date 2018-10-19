@@ -8,6 +8,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'shime/vim-livedown'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
