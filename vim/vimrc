@@ -6,6 +6,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
@@ -48,3 +49,4 @@ let g:ctrlp_follow_symlinks = 1
 let g:jedi#completions_enabled=1
 let g:jedi#popup_on_dot=0
 let g:jedi#show_call_signatures=2
+let g:NERDTreeIgnore=['__pycache__']
