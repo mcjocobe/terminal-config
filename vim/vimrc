@@ -6,3 +6,4 @@ Plugin 'VundleVim/Vundle.vim'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
+set encoding=utf8
