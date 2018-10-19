@@ -3,6 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
@@ -28,6 +29,15 @@ set splitbelow
 set splitright
 set ttimeoutlen=50
 set whichwrap+=<,>,h,l
+set wildignore+=*/bin/*
+set wildignore+=*/include/*
+set wildignore+=*/lib/*,*/lib64/*
+set wildignore+=*/media/*
+set wildignore+=*/man/*
+set wildignore+=*/share/*
+set wildignore+=*.pyo,*.pyc,*/__pycache__/*
+set wildignore+=*.sqlite3
 set wrap
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
+let g:ctrlp_follow_symlinks = 1
