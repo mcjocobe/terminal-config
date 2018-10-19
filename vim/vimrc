@@ -24,3 +24,5 @@ set number
 set ruler
 set showmatch
 set smartindent
+set splitbelow
+set splitright
