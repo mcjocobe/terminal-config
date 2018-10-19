@@ -5,6 +5,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()
 filetype plugin indent on
 set backspace=eol,start,indent
