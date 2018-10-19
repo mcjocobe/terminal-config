@@ -11,3 +11,4 @@ set ffs=unix,dos,mac
 set hlsearch
 set incsearch
 set lazyredraw
+set laststatus=2
