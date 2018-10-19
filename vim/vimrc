@@ -8,3 +8,4 @@ filetype plugin indent on
 set backspace=eol,start,indent
 set encoding=utf8
 set ffs=unix,dos,mac
+set hlsearch
