@@ -29,3 +29,5 @@ set splitright
 set ttimeoutlen=50
 set whichwrap+=<,>,h,l
 set wrap
+vnoremap <silent> * :call VisualSelection('f')<CR>
+vnoremap <silent> # :call VisualSelection('b')<CR>
