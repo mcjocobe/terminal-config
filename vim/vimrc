@@ -69,8 +69,9 @@ vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 let g:airline_powerline_fonts=1
 let g:airline_theme='base16'
-let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = "unique_tail_improved"
 let g:ctrlp_follow_symlinks = 1
 let g:jedi#completions_enabled=1
 let g:jedi#popup_on_dot=0
