@@ -90,3 +90,4 @@ let g:syntastic_python_checkers = ['flake8']
 augroup black
     autocmd BufWritePre *.py execute ':Black'
 augroup END
+nmap <leader>ne :NERDTreeToggle<cr>
