@@ -1,11 +1,9 @@
 call plug#begin('~/.vim/plugged')
 Plug 'bazelbuild/vim-bazel'
-Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'google/vim-maktaba'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'powerline/powerline'
 Plug 'preservim/nerdtree'
 Plug 'prettier/vim-prettier', {
