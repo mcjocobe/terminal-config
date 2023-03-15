@@ -2,9 +2,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'habamax/vim-asciidoctor'
+Plug 'preservim/nerdtree'
 Plug 'prettier/vim-prettier'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 Plug 'shime/vim-livedown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
@@ -64,7 +64,7 @@ syntax enable
 let mapleader=","
 nnoremap <leader>ve :vsplit ~/.vimrc<CR>
 nnoremap <leader>vs :source ~/.vimrc<CR>
-nnoremap <leader>ne :NERDTreeToggle<cr>
+nnoremap <leader>ne :NERDTreeToggleVCS<CR>
 nnoremap <F2> :bp<CR>
 nnoremap <F3> :ls<CR>
 nnoremap <F4> :bw<CR>
@@ -82,7 +82,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = "unique_tail_improved"
 let g:ctrlp_follow_symlinks = 1
 let g:go_def_mapping_enabled = 0
-let g:NERDTreeIgnore=['__pycache__']
+let g:NERDTreeIgnore = ['__pycache__', 'node_modules']
+let g:NERDTreeRespectWildIgnore=1
 let g:solarized_bold=0
 let g:solarized_italic=0
 let g:syntastic_always_populate_loc_list=1
