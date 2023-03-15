@@ -7,6 +7,7 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['vue', 'javascript'],
   \ }
+Plug 'psf/black', { 'branch': 'stable' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
@@ -96,4 +97,5 @@ let g:syntastic_c_checkers = ['splint', 'clang_check', 'make', 'gcc']
 let g:syntastic_html_checkers = ['tidy']
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_python_checkers = ['flake8']
+autocmd BufWritePre *.py execute ':Black'
 autocmd BufWritePre *.vue,*.js,*.mjs execute ':Prettier'
