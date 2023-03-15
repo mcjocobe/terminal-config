@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-fugitive'
@@ -62,6 +63,7 @@ let mapleader=","
 nnoremap <leader>ve :vsplit ~/.vimrc<CR>
 nnoremap <leader>vs :source ~/.vimrc<CR>
 nnoremap <leader>ne :NERDTreeToggleVCS<CR>
+nnoremap <leader>fz :FZF<CR>
 nnoremap <F2> :bp<CR>
 nnoremap <F3> :ls<CR>
 nnoremap <F4> :bw<CR>
@@ -70,6 +72,7 @@ nnoremap <C-h> <C-W><C-h>
 nnoremap <C-t> <C-W><C-j>
 nnoremap <C-n> <C-W><C-k>
 nnoremap <C-s> <C-W><C-l>
+nnoremap <C-p> :Files<CR>
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 let g:airline_powerline_fonts=1
@@ -77,7 +80,6 @@ let g:airline_theme='base16'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = "unique_tail_improved"
-let g:ctrlp_follow_symlinks = 1
 let g:go_def_mapping_enabled = 0
 let g:NERDTreeIgnore = ['__pycache__', 'node_modules']
 let g:NERDTreeRespectWildIgnore=1
