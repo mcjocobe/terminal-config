@@ -6,10 +6,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'powerline/powerline'
 Plug 'preservim/nerdtree'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['vue', 'javascript'],
-  \ }
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
