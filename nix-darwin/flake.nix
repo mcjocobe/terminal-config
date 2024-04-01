@@ -17,6 +17,7 @@
     darwinConfigurations.mac = nix-darwin.lib.darwinSystem {
       modules = [
         ./configuration.nix
+        ./overlays.nix
         ./system-packages.nix
       ];
       specialArgs = {inherit revision;};
