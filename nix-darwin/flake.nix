@@ -11,14 +11,21 @@
     nixpkgs,
   }: let
     revision = self.rev or self.dirtyRev or null;
+    mkDarwinSystem = {extra-modules ? []}:
+      nix-darwin.lib.darwinSystem {
+        modules =
+          [
+            ./configuration.nix
+            ./overlays.nix
+            ./system-packages.nix
+          ]
+          ++ extra-modules;
+        specialArgs = {inherit revision;};
+      };
   in {
-    darwinConfigurations.mac = nix-darwin.lib.darwinSystem {
-      modules = [
-        ./configuration.nix
-        ./overlays.nix
-        ./system-packages.nix
-      ];
-      specialArgs = {inherit revision;};
+    darwinConfigurations = {
+      le-mini = mkDarwinSystem {};
+      tiko-macbook = mkDarwinSystem {};
     };
     darwinPackages = self.darwinConfigurations.mac.pkgs;
   };
