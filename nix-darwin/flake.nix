@@ -12,46 +12,15 @@
     nix-darwin,
     nixpkgs,
   }: let
-    configuration = {pkgs, ...}: let
-      python = pkgs.python311.withPackages (ps: with ps; [powerline]);
-      myVim = pkgs.vim-full.override {
-        python3 = python;
-        wrapPythonDrv = true;
-      };
-    in {
-      environment.systemPackages = [
-        pkgs.alejandra
-        pkgs.direnv
-        pkgs.fzf
-        pkgs.git
-        pkgs.powerline
-        pkgs.ranger
-        pkgs.tmux
-        myVim
-      ];
-
-      # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
-      # nix.package = pkgs.nix;
-
-      nix.settings.experimental-features = "nix-command flakes";
-      nixpkgs.hostPlatform = "aarch64-darwin";
-      programs.zsh.enable = true;
-      system.configurationRevision = self.rev or self.dirtyRev or null;
-
-      # Used for backwards compatibility, please read the changelog before changing.
-      # $ darwin-rebuild changelog
-      system.stateVersion = 4;
-
-    };
+    revision = self.rev or self.dirtyRev or null;
   in {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#ZRH-0025CM
-    darwinConfigurations."ZRH-0025CM" = nix-darwin.lib.darwinSystem {
-      modules = [configuration];
+    darwinConfigurations.mac = nix-darwin.lib.darwinSystem {
+      modules = [
+        ./configuration.nix
+        ./system-packages.nix
+      ];
+      specialArgs = {inherit revision;};
     };
-
-    # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."ZRH-0025CM".pkgs;
+    darwinPackages = self.darwinConfigurations.mac.pkgs;
   };
 }
