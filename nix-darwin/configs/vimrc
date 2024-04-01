@@ -83,6 +83,3 @@ let g:syntastic_python_flake8_args='--ignore=F821,E302,E501,W503'
 autocmd BufWritePre *.py execute ':Black'
 autocmd BufWritePre *.vue,*.js,*.mjs execute ':Prettier'
 autocmd BufWritePre *.nix execute ':%!alejandra -qq'
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
