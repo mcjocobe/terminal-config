@@ -12,7 +12,13 @@
     nix-darwin,
     nixpkgs,
   }: let
-    configuration = {pkgs, ...}: {
+    configuration = {pkgs, ...}: let
+      python = pkgs.python311.withPackages (ps: with ps; [powerline]);
+      myVim = pkgs.vim-full.override {
+        python3 = python;
+        wrapPythonDrv = true;
+      };
+    in {
       environment.systemPackages = [
         pkgs.alejandra
         pkgs.direnv
@@ -21,7 +27,7 @@
         pkgs.powerline
         pkgs.ranger
         pkgs.tmux
-        pkgs.vim
+        myVim
       ];
 
       # Auto upgrade nix package and the daemon service.
