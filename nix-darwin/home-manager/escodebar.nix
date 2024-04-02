@@ -26,6 +26,11 @@
         src = pkgs.zsh-fzf-tab;
         file = "share/fzf-tab/fzf-tab.plugin.zsh";
       }
+      {
+        name = "fzf-z";
+        src = pkgs.zsh-z;
+        file = "share/zsh-z/zsh-z.plugin.zsh";
+      }
     ];
     syntaxHighlighting.enable = true;
   };
