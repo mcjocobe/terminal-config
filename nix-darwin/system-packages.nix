@@ -10,6 +10,7 @@
     ranger
     ripgrep
     tmux
+    tree
     vim-configured
   ];
 }
