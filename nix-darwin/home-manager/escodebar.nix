@@ -4,9 +4,13 @@
     nodenv
   ];
   home.stateVersion = "24.05";
+  programs.autojump.enable = true;
+  programs.direnv.enable = true;
+  programs.eza.enable = true;
   programs.fzf.enable = true;
   programs.home-manager.enable = true;
   programs.zsh = {
+    autosuggestion.enable = true;
     dotDir = ".config/zsh";
     enable = true;
     enableCompletion = true;
