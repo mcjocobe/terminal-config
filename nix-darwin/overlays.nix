@@ -10,6 +10,7 @@
       namePrefix = "vim-";
       src = "${prev.pkgs.python311Packages.powerline}/share/vim";
     };
+  in {
     vim-configured =
       (prev.pkgs.vim-full.override {
         python3 = python;
@@ -35,11 +36,23 @@
           };
         };
       };
-  in {
-    inherit vim-configured;
+  };
+  vscode-overlay = final: prev: {
+    vscode-configured = prev.pkgs.vscode-with-extensions.override {
+      vscodeExtensions = with prev.pkgs.vscode-extensions; [
+        bbenoist.nix
+        editorconfig.editorconfig
+        kamadorueda.alejandra
+        mkhl.direnv
+        ms-python.black-formatter
+        ms-python.python
+        vscodevim.vim
+      ];
+    };
   };
 in {
   nixpkgs.overlays = [
     vim-overlay
+    vscode-overlay
   ];
 }

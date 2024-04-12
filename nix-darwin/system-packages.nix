@@ -12,5 +12,6 @@
     tmux
     tree
     vim-configured
+    vscode-configured
   ];
 }

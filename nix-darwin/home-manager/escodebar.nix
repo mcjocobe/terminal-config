@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    pyenv
-    nodenv
-    vscode
-  ];
   home.stateVersion = "24.05";
   programs.autojump.enable = true;
   programs.direnv.enable = true;
