@@ -50,6 +50,9 @@
       };
       tiko-macbook = mkDarwinSystem {
         user = "escodebar";
+        extra-modules = [
+          ./tiko/builders.nix
+        ];
       };
     };
     darwinPackages = self.darwinConfigurations.mac.pkgs;
