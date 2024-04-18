@@ -12,6 +12,7 @@
     tmux
     tree
     vim-configured
+    neovim
     vscode-configured
   ];
 }

@@ -46,7 +46,6 @@
         mkhl.direnv
         ms-python.black-formatter
         ms-python.python
-        vscodevim.vim
       ];
     };
   };
