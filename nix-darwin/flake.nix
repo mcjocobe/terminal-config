@@ -17,7 +17,7 @@
     mkDarwinSystem = {
       extra-modules ? [],
       with-home-manager ? true,
-      user ? "escodebar",
+      user ? "joseluiscolomer",
     }: let
       home-manager-modules =
         if with-home-manager
@@ -45,11 +45,8 @@
       };
   in {
     darwinConfigurations = {
-      le-mini = mkDarwinSystem {
-        user = "pablo.verges";
-      };
       tiko-macbook = mkDarwinSystem {
-        user = "escodebar";
+        user = "joseluiscolomer";
         extra-modules = [
           ./tiko/builders.nix
         ];

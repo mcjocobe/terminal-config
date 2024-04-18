@@ -1,3 +1,3 @@
 {user, ...}: {
-  users.users."${user}".home = "/Users/escodebar";
+  users.users."${user}".home = "/Users/joseluiscolomer";
 }
