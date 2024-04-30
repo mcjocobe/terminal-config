@@ -8,7 +8,7 @@ in {
       systems = ["x86_64-linux"];
       maxJobs = 1;
       sshUser = "tiko";
-      sshKey = "/Users/joseluiscolomer/.ssh/git_id_ed25519";
+      sshKey = "/Users/joseluiscolomer/.ssh/id_ed25519";
       speedFactor = 2;
       supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
       mandatoryFeatures = [];

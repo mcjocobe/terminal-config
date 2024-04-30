@@ -7,6 +7,7 @@
     fzf
     git
     powerline
+    pyenv
     ranger
     ripgrep
     tmux
