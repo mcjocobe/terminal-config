@@ -1,15 +1,21 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     alejandra
+    arp-scan
     black
     direnv
     fasd
     fd
     fzf
     git
+    mosquitto
     neovim
+    nmap
+    nodejs
+    postgresql
     powerline
     pyenv
+    qmk
     ranger
     ripgrep
     sops
@@ -18,5 +24,7 @@
     vault
     vim-configured
     vscode-configured
+    wireguard-go
+    wireguard-tools
   ];
 }
